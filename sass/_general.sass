@@ -1,0 +1,617 @@
+html
+	font-family: 'Montserrat', sans-serif
+
+.container
+	position: relative
+	margin: 0 auto
+
+a
+	text-decoration: none
+	color: $color-2
+
+.nav-main_list 
+	display: flex
+	align-items: center
+	position: absolute
+	justify-content: space-between
+	list-style: none
+	width: 100%
+	padding-left: 0
+	z-index: 5
+	.nav-main_list-element
+		color: $color-3
+		text-transform: uppercase
+		position: relative
+		a
+			font-weight: 500
+			filter: drop-shadow(1px 1px 10px $color-1)
+			color: $color-2
+			.logo-img
+				margin: 0 8px
+				width: 52px
+				height: 67px
+		.logo-style
+			font-weight: 900
+			display: flex
+			align-items: center
+		.nav_phone-link
+			display: flex
+			align-items: center
+			.nav_phone-logo
+				margin-right: 10px
+		&_phone-form
+			display: flex
+			flex-direction: column
+			align-items: right
+			position: absolute
+			width: 160px
+			padding: 10px
+			right: 0
+			top: 30px
+			background-color: rgba(0, 0, 0, 0.3)
+			border-radius: 5px
+			box-shadow: 2px 2px 5px $color-1
+			transition: 0.5s linear
+			a
+				&:hover
+					color: $color-3
+
+			
+	.menu-item-animation
+		.nav-main_link
+			transition: 0.5s linear
+			&:hover
+				color: $color-3
+				text-shadow: 2px 2px 10px $color-1
+	.active-page
+		border-bottom: 2px solid $color-2
+		padding-bottom: 5px
+.offer
+	&-1
+		background: url(../img/jpg/bg_offer_01.jpg) center center / cover no-repeat
+	&-2
+		background: url(../img/jpg/bg_offer_02.jpg) center center / cover no-repeat
+	.offer-info-wrapper
+		width: 460px
+		margin-left: 80px
+	&-slider
+		position: relative
+		box-shadow: 0px 20px 50px $color-4
+		&_item
+			height: 68vh
+			padding-top: 200px
+			color: $color-2
+			animation: anim-1 0.2s
+			z-index: 1
+			&_h2
+				text-transform: uppercase
+				font-weight: bold
+				font-size: 30px
+				line-height: 36px
+				margin: 0 0 10px 0
+				&--name
+					font-size: 46px
+					line-height: 56px
+
+			&_desc
+				font-weight: light
+				font-size: 20px
+				line-height: 24px
+				display: inline-block
+				margin: 0 0 10px 0
+				&--first
+					font-weight: normal
+					font-size: 24px
+					line-height: 29px
+
+			&_btn
+				@include btn
+				@include btn-1
+				&:hover
+					@include hover-btn2
+
+	/* Слайдер */
+	.slick-slider
+		position: relative
+	/* Ограничивающая оболочка */
+	.slick-list 
+		overflow: hidden
+		list-style: none
+	/* Лента слайдов */
+	.slick-track
+		display: flex
+	/* Слайд */
+	.slick-slide
+	/* Слайд активный (показывается) */
+	.slick-slide.slick-active
+	/* Слайд основной */
+	.slick-slide.slick-current
+	/* Слайд по центру */
+	.slick-slide.slick-center
+	/* Клонированный слайд */
+	.slick-slide.slick-cloned
+	/* Стрелка */
+	.slick-arrow
+		opacity: 0.3
+		cursor: pointer
+		position: absolute
+		font-size: 0
+		border: 0
+		background-color: rgba(0, 0, 0, 0)
+		border-radius: 10%
+		color: $color-3
+		z-index: 5
+		top: 50%
+		&:hover
+			opacity: 1
+			background-color: rgba(0, 0, 0, 0.3)
+	/* Стрелка влево */
+	.slick-arrow.slick-prev
+		&:before
+			content: "❮"
+			font-size: 80px
+		left: 3%
+	/* Стрелка вправо */
+	.slick-arrow.slick-next
+		&:before
+			content: "❯"
+			font-size: 80px	
+		right: 3%
+	/* Стрелка не активная */
+	.slick-arrow.slick-disabled
+	/* Точки (булиты) */
+	.slick-dots
+		list-style: none
+		display: flex
+		position: absolute
+		bottom: 20px
+		left: 50%
+		transform: translate(-50%, 50%)
+	.slick-dots li
+		margin: 0 5px
+		
+	/* Активная точка */
+	.slick-dots li.slick-active
+		button
+			background-color: $color-3
+			opacity: 0.7
+	/* Элемент точки */
+	.slick-dots li button
+		font-size: 0
+		width: 30px
+		height: 30px
+		background-color: rgba(255, 255, 255, 0.2)
+		border-radius: 50%
+		border: 0
+		cursor: pointer
+		&:hover
+			background-color: $color-2
+
+.hidden
+	transition: 0.1s linear
+	visibility: hidden
+
+.lawyer-info
+	text-align: center
+	margin-top: 50px
+	&_h2
+		@include h2
+	&_text
+		text-align: justify
+		text-indent: 30px
+		font-weight: normal
+		font-size: 18px
+		line-height: 22px
+.tolearnmore
+	margin: 0 0 20px 0
+	text-align: right
+	a 
+		color: $color-4
+		transition: 0.5s linear
+		&:hover
+			color: $color-3
+.legal-aid
+	text-align: center
+	margin-top: 50px
+	&_h2
+		@include h2
+	&_kinds
+		margin-top: 30px
+		@include list-1
+		&_item
+			position: relative
+			background-color: $color-4
+			text-align: center
+			height: 250px
+			width: 300px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 20px
+			box-shadow: 2px 2px 10px  $color-1
+			transition: 0.8s linear
+			padding: 20px
+			&--criminal
+				background: url(../img/jpg/bg_01.jpg) center center / cover no-repeat
+			&--arbitration
+				background: url(../img/jpg/bg_02.jpg) center center / cover no-repeat
+			&--civil
+				background: url(../img/jpg/bg_03.jpg) center center / cover no-repeat
+			&:hover
+				animation: anim-2 1s
+				box-shadow: 5px 5px 50px  $color-1
+				height: 250px
+				width: 300px
+			.legal-aid_transform-item
+				font-size: 30px
+				line-height: 32px
+				transform: translate(0, -100px)
+			&_h3
+				color: $color-3
+				text-shadow: 1px 1px 5px $color-1
+				transition: 0.8s linear
+				font-weight: 500
+				font-size: 36px
+				line-height: 40px
+			&_desc
+				transition: 0.1s linear
+				color: $color-1
+				top: 60px
+				left: 0
+				position: absolute
+				text-align: left
+				margin: 10px 0 10px 0	
+				font-weight: 400
+				font-size: 18px
+				line-height: 20px
+				.legal-aid_desc
+					margin: 0
+					list-style: none
+					padding: 0 20px 0 60px
+					&_item
+						position: relative
+						transition: 0.8s linear
+						animation: anim-3 4s 
+						margin: 10px 0 0 0
+						text-shadow: 1px 1px 8px $color-2
+						.liststyle
+							&::before
+								position: absolute
+								content: ""
+								height: 3px
+								width: 15px
+								background-color: $color-3
+								left: -20px
+								top: 10px
+								transform: rotate(-45deg)
+								border-radius: 5px
+								box-shadow: 2px 2px 5px $color-1
+							&::after
+								position: absolute
+								content: ""
+								height: 3px
+								width: 10px
+								background-color: $color-3
+								left: -26px
+								top: 10px
+								transform: rotate(45deg)
+								border-radius: 5px
+.principles
+	text-align: center
+	margin-top: 50px
+	&_h2
+		@include h2
+	/* Слайдер */
+	.slick-slider
+		position: relative
+		padding: 10px 30px
+	/* Ограничивающая оболочка */
+	.slick-list 
+		overflow: hidden
+		list-style: none
+	/* Лента слайдов */
+	.slick-track
+		display: flex
+	/* Слайд */
+	.slick-slide
+		width: 200px
+		padding: 30px 15px 10px 15px
+		margin: 0 30px
+		.principles_list_item_img
+			width: 80px
+			height: 80px
+	/* Слайд активный (показывается) */
+	.slick-slide.slick-active
+	/* Слайд основной */
+	.slick-slide.slick-current
+	/* Слайд по центру */
+	.slick-slide.slick-center
+	/* Клонированный слайд */
+	.slick-slide.slick-cloned
+	/* Стрелка */
+	.slick-arrow
+		cursor: pointer
+		position: absolute
+		top: 50%
+		font-size: 0
+		border: 0
+		background-color: rgba(0, 0, 0, 0)
+		border-radius: 10%
+		color: $color-3
+		margin: -60px 0 0 0
+		&:hover
+			background-color: rgba(0, 0, 0, 0.1)
+			color: $color-1
+	/* Стрелка влево */
+	.slick-arrow.slick-prev
+		left: 0
+		&:before
+			content: "❮"
+			font-size: 80px
+	/* Стрелка вправо */
+	.slick-arrow.slick-next
+		right: 0
+		&:before
+			content: "❯"
+			font-size: 80px	
+	/* Стрелка не активная */
+	.slick-arrow.slick-disabled
+	/* Точки (булиты) */
+	.slick-dots
+		list-style: none
+		display: flex
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translate(-50%, 50%)
+	.slick-dots li
+		margin: 0 5px
+		
+	/* Активная точка */
+	.slick-dots li.slick-active
+		button
+			background-color: $color-3
+	/* Элемент точки */
+	.slick-dots li button
+		font-size: 0
+		width: 20px
+		height: 20px
+		background-color: rgba(0, 0, 0, 0.1)
+		border-radius: 50%
+		border: 0
+		cursor: pointer
+		&:hover
+			background-color: $color-1
+			
+.practice
+	text-align: center
+	margin-top: 70px
+	background: url(../img/jpg/bg_04.jpg) center center / cover no-repeat
+	color: $color-2
+	text-shadow: 1px 1px 5px $color-1
+	.container
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		min-height: 300px
+		.practice_h2
+			@include h2
+			margin: 0
+		.practice_desc
+			font-size: 18px
+		.practice_btn
+			@include btn
+			@include btn-1
+			margin-top: 20px
+			&:hover
+				@include hover-btn2
+	
+.schema
+	text-align: center
+	margin-top: 70px
+	&_h2
+		@include h2
+	&_steps
+		display: flex
+		flex-direction: column
+		&_item
+			display: flex
+			justify-content: center
+			position: relative
+			margin-bottom: 50px
+			&_text
+				width: 300px
+				position: absolute
+				&_h3
+					font-weight: bold
+					font-size: 14px
+					line-height: 17px
+				&_desc
+					font-weight: 300
+					font-size: 14px
+					line-height: 17px
+				&--left
+					left: 205px
+				&--right
+					right: 205px
+			&_img-wrap
+				width: 100px
+				height: 100px
+				position: relative
+				background-color: $color-4
+				border-radius: 50px
+				display: flex
+				align-items: center
+				justify-content: center
+				color: $color-2
+				font-weight: bold
+				font-size: 64px
+				line-height: 78px
+			&_img-wrap--after
+				&::after
+					content: ""
+					position: absolute
+					width: 4px
+					height: 40px
+					left: 50%
+					top: 105%
+					background-color: $color-1
+
+.consultation-main
+	text-align: center
+	background: url(../img/jpg/bg_05.jpg) center center / cover no-repeat
+	padding: 50px
+	&_wrap
+		&_h2
+			margin: 0
+			color: $color-2
+		&_form
+			background-color: $color-2
+			border-radius: 30px
+			box-shadow: 5px 5px 20px $color-1
+			margin-top: 30px
+			width: 65%
+			margin-left: 35%
+			padding: 40px 0 40px 0
+			&_btn
+				@include btn
+				@include btn-1
+				&:hover
+					@include hover-btn2
+.map
+	// background-color: $color-4
+	&_h2
+		text-align: center
+		margin: 0
+		padding: 20px 0
+	.slide-map-wrap
+		display: flex
+		.map_info_slider
+		/* Слайдер */
+		.slick-slider
+			width: 50%
+			position: relative
+		/* Ограничивающая оболочка */
+		.slick-list 
+			overflow: hidden
+			list-style: none
+		/* Лента слайдов */
+		.slick-track
+		/* Слайд */
+		.slick-slide
+			height: 367px
+		/* Слайд активный (показывается) */
+		.slick-slide.slick-active
+		/* Слайд основной */
+		.slick-slide.slick-current
+		/* Слайд по центру */
+		.slick-slide.slick-center
+		/* Клонированный слайд */
+		.slick-slide.slick-cloned
+		/* Стрелка */
+		.slick-arrow
+			cursor: pointer
+			position: absolute
+			top: 50%
+			font-size: 0
+			border: 0
+			background-color: rgba(0, 0, 0, 0)
+			border-radius: 10%
+			color: $color-3
+			margin: -60px 0 0 0
+			&:hover
+				background-color: rgba(0, 0, 0, 0.1)
+				color: $color-1
+		/* Стрелка влево */
+		.slick-arrow.slick-prev
+			left: 0
+			z-index: 5
+			&:before
+				content: "❮"
+				font-size: 80px
+		/* Стрелка вправо */
+		.slick-arrow.slick-next
+			right: 0
+			&:before
+				content: "❯"
+				font-size: 80px	
+		/* Стрелка не активная */
+		.slick-arrow.slick-disabled
+		/* Точки (булиты) */
+		.slick-dots
+			list-style: none
+			display: flex
+			position: absolute
+			bottom: 5px
+			left: 50%
+			transform: translate(-50%, 50%)
+		.slick-dots li
+			margin: 0 5px
+			
+		/* Активная точка */
+		.slick-dots li.slick-active
+			button
+				background-color: $color-3
+		/* Элемент точки */
+		.slick-dots li button
+			font-size: 0
+			width: 20px
+			height: 20px
+			background-color: rgba(0, 0, 0, 0.1)
+			border-radius: 50%
+			border: 0
+			cursor: pointer
+			&:hover
+				background-color: $color-1
+	&_info
+		display: flex
+		justify-content: center
+		height: 185px
+		&_desc
+			font-size: 20px
+			text-align: center
+			width: 50%
+			.map_phone-logo
+				color: $color-1
+			a
+				color: $color-1
+				font-weight: bold
+				&:hover
+					color: $color-3
+					text-shadow: 0 0 10px $color-1
+		&_schema
+			img
+
+.main-footer
+	background-color: $color-3
+	padding: 15px
+	&_wrap
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		&_copyright
+			display: flex
+			&_img
+				width: 50px
+				height: 50px
+			&_text
+				margin-left: 25px
+				margin-right: 25px
+			&_btn
+				@include btn
+				@include btn-2
+				font-weight: bold
+				font-size: 10px
+				line-height: 10px
+				padding: 20px 22px
+				transition: 0.3s linear
+				max-width: 180px
+				max-height: 44px
+				&:hover
+					background-color: $color-2
+					color: $color-1
+					box-shadow: 1px 1px 10px $color-1			
+				
+
+		

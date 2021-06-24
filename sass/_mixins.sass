@@ -1,0 +1,45 @@
+//Кнопки
+@mixin btn
+	border: 0
+	border-radius: 50px
+	font-weight: bold
+	font-size: 16px
+	text-transform: uppercase
+	line-height: 16px
+	margin: 0
+	box-shadow: 1px 1px 10px black
+	padding: 20px 32px 20px 32px
+	transition: 0.5s linear
+	cursor: pointer
+@mixin btn-1
+	background-color: $color-3
+@mixin btn-2
+	background-color: $color-1
+	color: $color-2
+
+//Списки
+@mixin list-1
+	display: flex
+	justify-content: space-between
+	list-style: none
+	padding: 0
+
+//Заголовки
+@mixin h2
+	font-weight: bold
+	font-size: 24px
+	line-height: 29px
+@mixin h3
+	font-weight: bold
+	font-size: 18px
+	line-height: 22px
+
+//Ховеры
+@mixin hover-btn1
+	background-color: $color-4
+	color: $color-2
+	box-shadow: 1px 1px 10px $color-4
+@mixin hover-btn2
+	background-color: $color-1
+	color: $color-2
+	box-shadow: 1px 1px 10px $color-4
